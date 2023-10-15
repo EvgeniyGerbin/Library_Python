@@ -7,7 +7,7 @@ def chat_with_gpt(request):
     if not user_input:
         return JsonResponse({"response": "Поле вводу не може бути порожнім"})
 
-    openai.api_key = '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'  # Зберігайте ключ в змінній оточення
+    openai.api_key = 'your_api_key'  # Зберігайте ключ в змінній оточення
 
     messages = [{"role": "user", "content": user_input}]
     response = openai.ChatCompletion.create(model="gpt-3.5-turbo",
